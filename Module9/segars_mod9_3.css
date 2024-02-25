@@ -37,3 +37,26 @@ a:visited{
 .intro{
     text-indent: 2em;
 }
+footer{
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width:100%
+}
+footer p{
+    color:white;
+    font-weight:400;
+    float: right;
+    padding-right: 10px;
+    font-style: italic;
+}
+footer a{
+    text-decoration: none;
+    color:white;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+footer #copyright{
+    float: left;
+}

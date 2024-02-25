@@ -1,10 +1,42 @@
+<!-- Samuel Segars : Assignment 10.3 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>CSD 340 Web Development with HTML and CSS</title>
+    <link href="Segars_Mod10_3.css" rel="stylesheet" type="text/css">
 </head>
+<script>
+    function imgChange(idName, img1, img2) {
+        let id = document.getElementById(idName)
+        if (id.getAttribute('src') === img2) {
+            id.setAttribute('src',img1)
+        } else {
+            id.setAttribute('src',img2)
+        }
+    }
+</script>
 <body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
 
+    <div>
+        <a href=#
+           onclick=imgChange('cave','Images/cave_01.jpg','Images/cave_02.jpg')>
+            <img id="cave" src = "Images/cave_01.jpg" alt="Cave">
+        </a>
+    </div>
+<br>
+    <div>
+        <a href=#
+           onclick=imgChange('moon','Images/moon_01.jpg','Images/moon_02.jpg')
+           >
+            <img id="moon" src="Images/moon_02.jpg" alt="Moon">
+        </a>
+    </div>
+    <footer>
+        <p id="copyright">Copyright 2024 - Segars</p>
+        <p><a href="../index.html">Back To Landing Page</a></p>
+    </footer>
 </body>
 </html>
