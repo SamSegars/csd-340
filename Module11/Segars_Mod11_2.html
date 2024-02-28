@@ -1,0 +1,58 @@
+<!--
+Sam Segars Module 11-2 Assignment
+Per Assignment Instructions Display button was included but could be removed if display(); is uncommented  in functions
+add() and deleteFromList() which would allow users to see their list updated as tasks are added or deleted.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<script>
+    let taskList = [];
+
+    function add(){
+        taskList.push(document.getElementById("task").value);
+        alert(document.getElementById("task").value + " added to list as Task Number " + taskList.length + ".")
+        document.getElementById("task").value = "";
+        //Delete below // to automatically update after add
+        //display();
+    }
+
+    function display(){
+        document.getElementById("list").innerHTML = "";
+        for(let i in taskList){
+            document.getElementById("list").innerHTML += "<li> Task " + (parseInt(i) + 1) + ": " + taskList[i] + "</li>";
+        }
+    }
+
+    function deleteFromList(){
+        let select = document.getElementById("delSelect").value;
+        taskList.splice(select - 1, 1);
+        //Delete below // to automatically update after delete
+        //display();
+    }
+</script>
+<body>
+<h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+<form>
+    <label for="task">Task:</label>
+    <input type="text" id="task">
+    <input type="button" value="Add" onclick="add()">
+    <br>
+    <label for="delSelect">Delete Task #: </label><input type="text" id="delSelect">
+    <input type="button" value="Delete" onclick="deleteFromList()">
+    <br>
+    <!-- See Comment at top if you would like to delete button below -->
+    <input type="button" value="Display" onclick="display()">
+
+</form>
+    <hr>
+<h2>Tasks</h2>
+<!-- <ol id="list"></ol> could be used to automatically create task numbers without Task keyword -->
+<ul id="list" style="list-style-type: none">
+</ul>
+</body>
+</html>
