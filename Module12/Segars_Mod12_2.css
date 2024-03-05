@@ -1,0 +1,46 @@
+h1{
+    text-align: center;
+    align-content: center;
+}
+#container{
+    padding: 2rem;
+}
+h3{
+    font-weight: 500;
+}
+li{
+    font-weight: 300;
+}
+ol{
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style-position: inside;
+}
+ul{
+    padding: 10px;
+    border: 1px dashed red;
+    list-style: upper-roman inside;
+}
+
+.container-child{
+    width: 45%;
+    float: left;
+}
+#leftdiv{
+    margin-right: 5%;
+}
+#LastDiv{
+    width: 100%;
+    margin-top: 60%;
+    float: right;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+}

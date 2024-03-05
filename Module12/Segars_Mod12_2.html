@@ -1,0 +1,66 @@
+<!-- Samuel Segars : Assignment 3.3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link href="Segars_Mod12_2.css" type="text/css" rel="stylesheet">
+<script>
+    bookArray = ["Percy Jackson: The Lightning Thief", "Percy Jackson: The Sea of Monsters",
+        "Percy Jackson: The Titan's Curse","Percy Jackson: The Battle of Labyrinth" , "Percy Jackson: The Last Olympian", "The Lost Hero", "The Son Of Neptune",
+        "The Mark of Athena", "The House Of Hades", "The Blood of Olympus"];
+    function topToBottom(){
+        document.getElementById("bookList").innerHTML =  "";
+        for(i in bookArray){
+            document.getElementById("bookList").innerHTML += "<li>" + bookArray[i] + "</li>";
+        }
+        document.getElementById("bookList").removeAttribute("reversed");
+    }
+    function bottomToTop(qualifiedName, value){
+        document.getElementById("bookList").innerHTML =  "";
+        for(const i in bookArray){
+            document.getElementById("bookList").innerHTML += "<li>" + bookArray.toReversed()[i] + "</li>";
+        }
+
+        document.getElementById("bookList").setAttribute("reversed", value);
+    }
+
+</script>
+</head>
+<body>
+<div id="container">
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+    <div class="container-child" id="leftdiv">
+        <h3>Top 10 Favorite Books</h3>
+        <button onclick="topToBottom()">Top To Bottom</button>
+        <button onclick="bottomToTop()">Bottom To Top</button>
+        <ol id="bookList">
+            <li>Percy Jackson: The Lightning Thief</li>
+            <li>Percy Jackson: The Sea of Monsters</li>
+            <li>Percy Jackson: The Titan's Curse</li>
+            <li>Percy Jackson: The Battle of Labyrinth</li>
+            <li>Percy Jackson: The Last Olympian</li>
+            <li>The Lost Hero</li>
+            <li>The Son Of Neptune</li>
+            <li>The Mark of Athena</li>
+            <li>The House Of Hades</li>
+            <li>The Blood of Olympus</li>
+        </ol>
+    </div>
+<div class="container-child" id="rightdiv">
+    <h3>5 Things I've Learned Since The Course Started</h3>
+    <ul>
+        <li>How to Center Items</li>
+        <li>Change Background Colors</li>
+        <li>How to link CSS stylesheets</li>
+        <li>How to use Classes for css</li>
+        <li>How to Put Divs side by side</li>
+    </ul>
+    </div>
+    <div id="LastDiv">
+        <p><a href="../index.html">Back To Landing Page</a></p>
+    </div>
+</div>
+
+</body>
+</html>
